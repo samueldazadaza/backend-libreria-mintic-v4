@@ -67,11 +67,16 @@
 				<version>3.0.4</version>
 				<configuration>
 					<appName>protected-castle-41142</appName>
+					<includeTarget>false</includeTarget>
+					<includes>
+						<include>${project.build.directory}/${project.build.finalName}.jar</include>
+					</includes>
+					<jdkVersion>${java.version}</jdkVersion>
 					<processTypes>
-					<web>java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war</web>
+						<web>java $JAVA_OPTS -jar target/${project.build.finalName}.jar</web>
 					</processTypes>
 				</configuration>
-			</plugin>
+				</plugin>
 
 
 	</plugins>
