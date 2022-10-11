@@ -66,17 +66,17 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.4</version>
 				<configuration>
-					<appName>protected-castle-41142</appName>
-					<includeTarget>false</includeTarget>
-					<includes>
+					<appName>tranquil-anchorage-91313</appName>
+					<includeTarget>true</includeTarget>
+					<!-- <includes>
 						<include>${project.build.directory}/${project.build.finalName}.jar</include>
-					</includes>
+					</includes> -->
 					<jdkVersion>${java.version}</jdkVersion>
 					<processTypes>
 						<web>java $JAVA_OPTS -jar target/${project.build.finalName}.jar</web>
 					</processTypes>
 				</configuration>
-				</plugin>
+			</plugin>
 
 
 	</plugins>
